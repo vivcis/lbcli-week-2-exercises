@@ -375,7 +375,7 @@ check_cmd "Timelock output creation" "TIMELOCK_OUTPUTS" "$TIMELOCK_OUTPUTS"
 
 # STUDENT TASK: Create the raw transaction with timelock
 # Version 2 is required for CSV (BIP 68) enforcement
-TIMELOCK_TX=$(bitcoin-cli -regtest createrawtransaction "$TIMELOCK_INPUTS" "$TIMELOCK_OUTPUTS" 0 2)
+TIMELOCK_TX=$(bitcoin-cli -regtest createrawtransaction "$TIMELOCK_INPUTS" "$TIMELOCK_OUTPUTS")
 check_cmd "Timelock transaction creation" "TIMELOCK_TX" "$TIMELOCK_TX"
 
 echo "Successfully created transaction with 10-block relative timelock!"
